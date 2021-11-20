@@ -11,64 +11,64 @@ int texResolution;
 
 float inCircle(float2 pt, float radius)
 {
-     return (length(pt) < radius) ? 1.0 : 0.0;
+    return (length(pt) < radius) ? 1.0 : 0.0;
 }
 
 float inSquare(float2 pt, float radius)
 {
-     return (distance(pt.x, 0) < radius) && (distance(pt.y, 0) < radius) ? 1.0 : 0.0;
+    return (distance(pt.x, 0) < radius) && (distance(pt.y, 0) < radius) ? 1.0 : 0.0;
 }
 
 [numthreads(8,8,1)]
 void SolidRed(uint3 id : SV_DispatchThreadID)
 {
-     Result[id.xy] = float4(1, 0, 0, 1);
+    Result[id.xy] = float4(1, 0, 0, 1);
 }
 
 [numthreads(8,8,1)]
 void SolidGreen(uint3 id : SV_DispatchThreadID)
 {
-     Result[id.xy] = float4(0, 1, 0, 1);
+    Result[id.xy] = float4(0, 1, 0, 1);
 }
 
 [numthreads(8,8,1)]
 void SolidBlue(uint3 id : SV_DispatchThreadID)
 {
-     Result[id.xy] = float4(0, 0, 1, 1);
+    Result[id.xy] = float4(0, 0, 1, 1);
 }
 
 [numthreads(8,8,1)]
 void SolidYellow(uint3 id : SV_DispatchThreadID)
 {
-     Result[id.xy] = float4(1, 1, 0, 1);
+    Result[id.xy] = float4(1, 1, 0, 1);
 }
 
 [numthreads(8,8,1)]
 void SplitScreen(uint3 id : SV_DispatchThreadID)
 {
-     int halfRes = texResolution >> 1;
-     float r = step(halfRes, id.x);
-     float g = step(halfRes, id.y);
-     float b = 0.0;
+    int halfRes = texResolution >> 1;
+    float r = step(halfRes, id.x);
+    float g = step(halfRes, id.y);
+    float b = 0.0;
 
 
-     Result[id.xy] = float4(r, g, b, 1);
+    Result[id.xy] = float4(r, g, b, 1);
 }
 
 [numthreads(8,8,1)]
 void Circle(uint3 id : SV_DispatchThreadID)
 {
-     int halfRes = texResolution >> 1;
-     float res = inCircle((float2)((int2)id.xy - halfRes), float(texResolution >> 2));
+    int halfRes = texResolution >> 1;
+    float res = inCircle((float2)((int2)id.xy - halfRes), float(texResolution >> 2));
 
-     Result[id.xy] = float4(res, res, 0.0, 1.0);
+    Result[id.xy] = float4(res, res, 0.0, 1.0);
 }
 
 [numthreads(8,8,1)]
 void Square(uint3 id : SV_DispatchThreadID)
 {
-     int halfRes = texResolution >> 1;
-     float res = inSquare((float2)((int2)id.xy - halfRes), float(texResolution >> 2));
+    int halfRes = texResolution >> 1;
+    float res = inSquare((float2)((int2)id.xy - halfRes), float(texResolution >> 2));
 
-     Result[id.xy] = float4(0.0, 0.0, res, 1.0);
+    Result[id.xy] = float4(0.0, 0.0, res, 1.0);
 }

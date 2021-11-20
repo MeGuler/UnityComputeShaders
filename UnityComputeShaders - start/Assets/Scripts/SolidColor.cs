@@ -3,42 +3,43 @@ using System.Collections;
 
 public class SolidColor : MonoBehaviour
 {
-
     public ComputeShader shader;
     public int texResolution = 256;
+    public string kernelName = "SolidRed";
 
-    Renderer rend;
-    RenderTexture outputTexture;
+    private Renderer _rend;
+    private RenderTexture _outputTexture;
 
-    int kernelHandle;
+    private int _kernelHandle;
 
     // Use this for initialization
     void Start()
     {
-        outputTexture = new RenderTexture(texResolution, texResolution, 0);
-        outputTexture.enableRandomWrite = true;
-        outputTexture.Create();
+        _outputTexture = new RenderTexture(texResolution, texResolution, 0);
+        _outputTexture.enableRandomWrite = true;
+        _outputTexture.Create();
 
-        rend = GetComponent<Renderer>();
-        rend.enabled = true;
+        _rend = GetComponent<Renderer>();
+        _rend.enabled = true;
 
         InitShader();
     }
 
     private void InitShader()
     {
-        kernelHandle = shader.FindKernel("CSMain");
+        _kernelHandle = shader.FindKernel(kernelName);
 
-        shader.SetTexture(kernelHandle, "Result", outputTexture);
- 
-        rend.material.SetTexture("_MainTex", outputTexture);
+        shader.SetInt("texResolution", texResolution);
+        shader.SetTexture(_kernelHandle, "Result", _outputTexture);
+
+        _rend.material.SetTexture("_MainTex", _outputTexture);
 
         DispatchShader(texResolution / 8, texResolution / 8);
     }
 
     private void DispatchShader(int x, int y)
     {
-        shader.Dispatch(kernelHandle, x, y, 1);
+        shader.Dispatch(_kernelHandle, x, y, 1);
     }
 
     void Update()
@@ -49,4 +50,3 @@ public class SolidColor : MonoBehaviour
         }
     }
 }
-

@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Challenge1 : MonoBehaviour
 {
-
     public ComputeShader shader;
     public int texResolution = 1024;
 
@@ -29,11 +28,16 @@ public class Challenge1 : MonoBehaviour
     {
         kernelHandle = shader.FindKernel("Square");
 
-		//Create a Vector4 with parameters x, y, width, height
+        var halfRes = texResolution >> 1;
+        var quarterRes = texResolution >> 2;
+        var rect = new Vector4(quarterRes, quarterRes, halfRes, halfRes);
+
+        //Create a Vector4 with parameters x, y, width, height
         //Pass this to the shader using SetVector
-        
+
+        shader.SetVector("rect", rect);
         shader.SetTexture(kernelHandle, "Result", outputTexture);
-       
+
         rend.material.SetTexture("_MainTex", outputTexture);
 
         DispatchShader(texResolution / 8, texResolution / 8);
@@ -52,4 +56,3 @@ public class Challenge1 : MonoBehaviour
         }
     }
 }
-
