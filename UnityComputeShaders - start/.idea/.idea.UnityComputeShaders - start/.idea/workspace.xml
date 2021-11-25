@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e51b8a5f-7e20-44cf-a830-5109a157f015" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.UnityComputeShaders - start/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.UnityComputeShaders - start/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.UnityComputeShaders - start/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.UnityComputeShaders - start/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstComputeShader.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstComputeShader.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SolidColor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SolidColor.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Challenge1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Challenge1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SolidColor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SolidColor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Challenge1.compute" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Challenge1.compute" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/SolidColor.compute" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/SolidColor.compute" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityComputeShaders - start/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityComputeShaders - start/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BufferJoy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BufferJoy.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PassData.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PassData.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BufferJoy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BufferJoy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OrbitingStars.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OrbitingStars.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PassData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PassData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/BufferJoy.compute" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/BufferJoy.compute" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/OrbitingStars.compute" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/OrbitingStars.compute" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PassData.compute" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PassData.compute" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,12 +91,16 @@
       <option name="presentableId" value="Default" />
       <updated>1637411600135</updated>
       <workItem from="1637411629186" duration="12140000" />
+      <workItem from="1637611087862" duration="2469000" />
+      <workItem from="1637703919704" duration="1739000" />
+      <workItem from="1637869148964" duration="2496000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,6 +113,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
